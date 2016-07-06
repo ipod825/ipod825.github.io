@@ -1,0 +1,10 @@
+cv/*.aux
+cv/*latexmk
+cv/*.log
+cv/*.out
+cv/*.snm
+cv/*.toc
+cv/*.dvi
+cv/*.fls
+cv/*.nav
+cv/*.vrb
