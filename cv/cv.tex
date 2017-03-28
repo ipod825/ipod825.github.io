@@ -1,34 +1,30 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{fontspec} 					%for loading fonts
-\usepackage{fancyhdr}
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** 
-\usepackage{fullpage}
-\usepackage{supertabular} 				%for Grades
-\usepackage{hanging}
+\usepackage{fontawesome}
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-    SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]{Fontin.otf}
-%%%
+\usepackage{enumitem}
+\setlist{nolistsep}
 
-%CV Sections inspired by: 
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    % total={170mm,257mm},
+    left=25mm,
+    right=25mm,
+    top=15mm,
+    bottom=15mm,
+}
+
+%CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
 \usepackage{titlesec}
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{2pt}{2pt}
 
 \begin{document}
@@ -36,108 +32,100 @@ ItalicFont = Fontin-Italic.otf
 
 \pagestyle{empty} % non-numbered pages
 
-\par{\centering
-        {\Huge SHIH-MING ``Mingo'' WANG
-    }\bigskip\par}
-
-\section{Personal Data}
-
-\begin{tabular}{rl}
-    \textsc{email:}     & \href{mailto:swang150@ucsc.edu}{swang150@ucsc.edu}\\
-    \textsc{Homepage:} & \href{http://ipod825.github.io/}{http://ipod825.github.io/}
-
-\end{tabular}
+\par{
+    \center
+{\Huge SHIH-MING WANG}\\
+\faEnvelope: \href{mailto:swang150@ucsc.edu}{swang150@ucsc.edu} \\
+\faUser: \href{http://ipod825.github.io/}{http://ipod825.github.io/}\\
+\faLinkedin: \href{https://www.linkedin.com/in/shih-ming-wang-73aa3769/}{https://www.linkedin.com/in/shih-ming-wang}\\
+\bigskip\par}
 
 %Section: Education
 \section{Education}
-\begin{tabular}{r|l}
-    \multicolumn{2}{l}{\textcolor{gray}{University of California, Santa Cruz}}\\
-    \textsc{2016-Present}       & Pursuing a PhD in Computer Science\\
-    \multicolumn{2}{l}{\textcolor{gray}{National Taiwan University (Best Ranked in Taiwan)}}\\
-    \textsc{June 2014}          & M.S. in Electrical Engineering, majoring Computer Science (Gpa: 4.21/4.3)\\
-                            & $\diamond$ Thesis title: Investigation on Optimal Mixing with Linkage Sets and Its Application\\
-                            & $\diamond$ Thesis advisor: Prof. Tian-Li Yu\\
-    \textsc{June 2012}          & B.S. in Electrical Engineering (Gpa:81.74/100)\\
-\end{tabular}
+    \textbf{Ph.D., Computer Science}, University of California, Santa Cruz \ (GPA:4.0/4.0)\hfill Sep. 2016-Present\\
+    \textbf{M.S., Computer Science}, National Taiwan University \ (GPA:4.21/4.3)\hfill Sep. 2012 - June 2014 \\
+    \textbf{B.S., Electrical Engineering}, National Taiwan University \hfill Sep. 2008 - June 2012
 
-\section{Previous Projects}
+\section{Publication}
+\textbf{Wang, S. M.}, \& Ku, L. W. (2006). ANTUSD: A Large Chinese Sentiment Dictionary.
 
-\begin{itemize}
-    \item \textbf{Keraflow}(Python): Open source project implementing a deep Learning library for Theano and Tensorflow, following Keras API. 
-    \item \textbf{Chinese OCR}(Matlab): Course project for the OCR contest in machine learning class (NTU). 
-    \item \textbf{ChenLianYen}(Javascript): Course project implementing a web-based RPG game.  
-\end{itemize}
+\textbf{Wang, S. M.}, Tung, Y. F., \& Yu, T. L. (2014, July). Investigation on efficiency of optimal mixing on various linkage sets. In 2014 IEEE Congress on Evolutionary Computation (CEC) (pp. 2475-2482). IEEE.
 
-
+\textbf{Wang, S. M.}, Wu, J. W., Chen, W. M., \& Yu, T. L. (2013, July). Design of test problems for discrete estimation of distribution algorithms. In Proceedings of the 15th annual conference on Genetic and evolutionary computation (pp. 407-414). ACM.
 
 \section{Research Experience}
-\textcolor{gray}{Academia Sinica (National academy of Taiwan)}
+\faMapMarker~\textbf{Academia Sinica}, Research Assistant \hfill Aug. 2015 - July 2016 \par
+\textbf{Lightweight Discourse CNN Model for Sentiment Analysis}
 \begin{itemize}
-    \item \textbf{Augmented NTUSD}: Built a Chinese sentiment dictionary containing polarity infomation of words for use of research on sentiment analysis. Designed experiments to test the applicability of the dictionary.
-    \item \textbf{Chinese Sentiment Analysis}: Applied word embedding as feature to determine sentiment polarity of each Chinese word using a neural network model.
+    \item Proposed a new CNN model incorporating the knowledge of discourse rules (e.g contrast and concession) and the learning ability of the deep neural network.
+    \item Performed experiments on several well-known sentiment analysis datasets (e.g. Stanford Sentiment Tree-bank) showing the simplicity and effectiveness of the proposed model.
 \end{itemize}
-\textcolor{gray}{National Taiwan University}
+\textbf{Sensing Emotions in Text Messages}
 \begin{itemize}
-    \item \textbf{LTGA Improvement}: Analyzed on a theoretical basis how the linkage-tee genetic algorithm (LTGA) utilizes its linkage model and improved LTGA by applying a dynamic model throughout the optimizing process.
-    \item \textbf{GA Benchmark Design}: Analyzed on a theoretical basis what problems are difficult for genetic algorithms (GA-hard) and designed a benchmark with controllable problem complexity for testing modern GAs.
-    \item \textbf{Animated Photo}: Implemented a system that takes single face photo as input and generates animated photos. Technique involves: face recognition, face modeling, image morphing.
+    \item Supervised on the project aiming to build a system that automatically conveys the emotion of received text to enrich the context in computer mediated communications.
+    \item Built sentiment classifiers from \href{http://www.livejournal.com/}{LiveJournal} posts with pre-trained word embedding as features. 
 \end{itemize}
 
+\textbf{Augmented NTUSD}: Built a Chinese sentiment dictionary containing polarity information of words for use of research on sentiment analysis. Designed experiments to test the applicability of the dictionary.
 
-%Section: Professional Experience at the top
-
-\section{Work Experience}
-\begin{tabular}{l|p{15cm}}
-    \textsc{Sep.} 2016 & \textbf{Teaching Assistant}, CS Department, UCSC\\
-                    & $\diamond$ Course: Introduction to Programming in Python\\
-                    & $\diamond$ Gave extra lectures regarding assignments. Graded homework exams\\
-    \textsc{Aug.} 2015 & \textbf{Research Assistant}, NLPLab, Academia Sinica\\
-    \textsc{Aug.} 2014 & \textbf{Mandatory National Substitute Service}, Environmental Protection Bureau of Taichung City Government\\
-                    & $\diamond$ Wrote web applications\\
-    \textsc{Feb.} 2014 & \textbf{Teaching Assistant}, CS Division, EE Department, NTU\\
-                    & $\diamond$ Courses: Probability and Statistics, Algorithm, Genetic Algorithm\\
-                    & $\diamond$ Prepared reviewing material and gave reviewing lectures. Gave extra lectures for challenged students. Graded homework \& exams\\
-    \textsc{Feb.} 2012  & \textbf{System Manager}, TEILAB, CS Division, EE Department, NTU\\
-                    & $\diamond$ Maintained web, nfe, nis server and laboratory cluster
-\end{tabular}
+\faMapMarker~\textbf{National Taiwan University}, Graduate Research Assistant \hfill Sep. 2012 - June 2014 \par
+\textbf{Thesis}: Investigation on Optimal Mixing with Linkage Sets and Its Application \\
+\textbf{LTGA Improvement}: Analyzed on a theoretical basis how the linkage-tee genetic algorithm (LTGA) utilizes its linkage model and improved LTGA by applying a dynamic model throughout the optimizing process. \\
+\textbf{GA Benchmark Design}: Analyzed on a theoretical basis what problems are difficult for genetic algorithms (GA-hard) and designed a benchmark with controllable problem complexity for testing modern GAs.
 
 
-\section{Publication \& Presentation}
-\begin{hangparas}{.25in}{1}
-    \textbf{Wang, Shih-Ming}, Lun-Wei, Ku \textit{ANTUSD: A Large Chinese Sentiment Dictionary.} LREC. 2016
-\end{hangparas}
-\begin{hangparas}{.25in}{1}
-    \textbf{Shih-Ming Wang}, Yu-Fan Tung, and Tian-Li Yu, \textit{Investigation on Efficiency of Optimal Mixing on Various Linkage Sets.} In Proceedings of the IEEE Congress on Evolutionary Computation (CEC), 2014.\\
-    $\diamond$ \footnotesize{Gave oral presentation at International Convention Center, Beijing, China}
-\end{hangparas}
-\begin{hangparas}{.25in}{1}
-    \textbf{Shih-Ming Wang}, Jie-Wei Wu, Wei-Ming Chen, and Tian-Li Yu, \textit{Design of Test Problems for Discrete Estimation of Distribution Algorithms.} In Proceedings of Conference on Genetic and Evolutionary Computation (GECCO), 2013.
-\end{hangparas}
+\section{Teaching Experience}
+\textbf{University of California, Santa Cruz}, Teaching Assistant  \hfill Sep. 2016 - present
+    \begin{itemize}
+        \item Assisted with course: Introduction to Programming in Python
+        \item Conducted weekly assignment session
+        \item Provided individual and small group instruction during office hours
+        \item Graded homework \& exams
+    \end{itemize}
+\textbf{ National Taiwan University}, Teaching Assistant \hfill Sep. 2013 - June 2014
+    \begin{itemize}
+        \item Assisted with courses in Probability and Statistic, Algorithm, Genetic Algorithm
+        \item Gave review lectures with designed problems
+        \item Graded homework \& exams
+    \end{itemize}
 
 \section{ACHIEVEMENT \& AWARDS}
 
-\begin{tabular}{l|p{14cm}}
-    2014 & Travel Grant of Domestic Graduate Attending International Symposiums, Ministry of Science and Technology, Taiwan \\
-    2013 & Graduate Teaching Assistantship, CS Division, EE Department, NTU\\
-\end{tabular}
+\textbf{Fellowship}, University of California, Santa Cruz \hfill Jan. 2017 - Mar. 2017
 
-\section{Selected  Extracurricular}
-\begin{tabular}{r|l}
-    2012-2014 & \sl{Member,} Swimming Team of Medicine School, NTU   \\
-    2010-2011 & \sl{Deputy Director of Activities,} Taichung Alumni Club \\
-    2010      & \sl{Convener,} Taichung Alumni Club Summer Camp, NTU   \\
-    2006      & \sl{Treasurer,} Harmonica Club, TCFSH
-\end{tabular}
+\textbf{Teaching Assistantship}, University of California, Santa Cruz \hfill Sep. 2016 - present
+
+\textbf{Travel Grant of Domestic Graduate Attending International Symposiums}, Ministry of Science and Technology, Taiwan \hfill Sep. 2014
+
+\textbf{Teaching Assistantship}, National Taiwan University \hfill Sep. 2013 - June 2014
+\begin{itemize}
+    \item Available to top 10\% of graduate students.
+\end{itemize}
+
+
+\section{Projects}
+\href{https://github.com/ipod825/keraflow}{\textbf{Keraflow}}: Personal open source project implementing a deep learning library on top of Theano and Tensorflow. \\
+\textbf{Recommendation System on Yelp Data} Course project for Machine Learning class (UCSC). Implemented (using only scipy \& numpy) a hybrid collaborative filtering model combining neighborhood model and factorization model, trained by batch gradient descent. \\
+\textbf{Chinese OCR}: Course project for the OCR contest in Machine Learning class (NTU). Implemented algorithms including naieve Bayes, support vector machine, neural network.
+\textbf{ChenLianYen}(Javascript): Course project implementing a web-based RPG game, where the user can control the role to explore the map and attack monsters on the map.
+
+
+\section{Extracurricular}
+Swimming Team of Medicine School, National Taiwan University \hfill 2012-2014
+\begin{itemize}
+    \item Finisher, 1.25 miles open water swimming
+\end{itemize}
+
+Taichung City Alumni Club, National Taiwan University \hfill 2008-2011
+\begin{itemize}
+    \item Deputy Director of Activity Group
+    \item Convener of summer camp for freshman
+\end{itemize}
 
 \section{Skills}
-{\sl Programming:} C/C++, Java, Javascript, Python, MATLAB\textregistered\\
-{\sl Languages:} Chinese (native), English (fluent), Taiwanese (intermediate)
+\textbf{Programming Language}: C/C++, Java, Python, R, MATLAB, Javascript \\
+\textbf{Machine Learning Libraries}: scipy, scikit-learn, Stanford CoreNLP, Keras, Theano, tensorflow \\
+\textbf{General}: Git, neovim, pandas, matplotlib 
+\textbf{Foreign Languages}: Chinese (native), Taiwanese (intermediate)
 
-
-%This do\cite{Wang:2013:DTP:2463372.2463419}.
-%\cite{DBLP:dblp_conf/gecco/WangWCY13}
-%\cite{6900275}. 
-%\cite{DBLP:dblp_conf/cec/WangTY14,}
-%\bibliographystyle{unsrt}%Used BibTeX style is unsrt
-%\bibliography{cv}
 \end{document}
