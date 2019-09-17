@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,9pt]{article}
 
 \usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
@@ -15,8 +15,8 @@
 \geometry{
     a4paper,
     % total={170mm,257mm},
-    left=25mm,
-    right=25mm,
+    left=10mm,
+    right=10mm,
     top=15mm,
     bottom=15mm,
 }
@@ -42,18 +42,22 @@
 
 %Section: Education
 \section{Education}
-    \textbf{Ph.D., Computer Science}, University of California, Santa Cruz \ (GPA:3.96/4.0)\hfill Sep. 2016-Present\\
+    \textbf{M.S., Computer Science}, University of California, Santa Cruz \ (GPA:3.87/4.0)\hfill Sep. 2016-Present\\
+    (Performed three years of studies in pursuit of Ph.D. before exiting program.)\\
     \textbf{M.S., Computer Science}, National Taiwan University \ (GPA:4.21/4.3)\hfill Sep. 2012 - June 2014 \\
     \textbf{B.S., Electrical Engineering}, National Taiwan University \hfill Sep. 2008 - June 2012
 
-\section{Publication}
-\textbf{Wang, S. M.}, \& Ku, L. W. (2006). ANTUSD: A Large Chinese Sentiment Dictionary.
 
-\textbf{Wang, S. M.}, Tung, Y. F., \& Yu, T. L. (2014, July). Investigation on efficiency of optimal mixing on various linkage sets. In 2014 IEEE Congress on Evolutionary Computation (CEC) (pp. 2475-2482). IEEE.
-
-\textbf{Wang, S. M.}, Wu, J. W., Chen, W. M., \& Yu, T. L. (2013, July). Design of test problems for discrete estimation of distribution algorithms. In Proceedings of the 15th annual conference on Genetic and evolutionary computation (pp. 407-414). ACM.
+% \section{Coursework} Machine Learning, Advanced Machine Learning (graphical model), Artificial Intelligence, Optimization, Classical And Bayesian Inference, Image Analysis and Computer Vision, Analysis of Algorithms, Programming Languages
 
 \section{Work Experience}
+\textbf{Software Engineering Intern, Google Inc.}, Mountain View, USA \hfill Jun. 2019 - Sep. 2019 \par
+\begin{itemize}
+    \item \textbf{Android On-Device Video Intelligence - ML model evaluation and prototype}
+    \begin{itemize}
+        \item The project focused on building machine learning model and pipeline for the video intelligence project, aiming to provide high level attributes for videos with on-device machine learning model. Adopted SceneNet and built an video classification pipeline using MediaPipe. Evaluated the performance of the method on the public Youtube-8M dataset.
+    \end{itemize}
+\end{itemize}
 \textbf{Software Engineering Intern, Google Inc.}, Boulder, USA \hfill Jun. 2018 - Sep. 2016 \par
 \begin{itemize}
     \item \textbf{HD Mapfacts Diff}
@@ -78,59 +82,47 @@
     \item \textbf{Augmented NTUSD}: Built a Chinese sentiment dictionary containing polarity information of words for use of research on sentiment analysis. Designed experiments to test the applicability of the dictionary.
 \end{itemize}
 
-\section{Teaching Experience}
-\textbf{Teaching Assistant, University of California, Santa Cruz}  \hfill Sep. 2016 - present
-    \begin{itemize}
-        \item Assisted with course: Introduction to Programming in Python (CMPS 5p), Algorithms and Abstract Data Types (CMPS101), Advanced Programming (CMPS 109), Comparative Programming Languages (CMPS 112)
-        \item Conducted weekly lab sessions
-        \item Provided individual and small group instruction during office hours
-        \item Graded homework \& exams
-    \end{itemize}
-\textbf{Teaching Assistant, National Taiwan University} \hfill Sep. 2013 - June 2014
-    \begin{itemize}
-        \item Assisted with courses in Probability and Statistic, Algorithm, Genetic Algorithm
-        \item Gave review lectures with designed problems
-        \item Graded homework \& exams
-    \end{itemize}
+% \faMapMarker~\textbf{National Taiwan University}, Graduate Research Assistant \hfill Sep. 2012 - June 2014 \par
+% \textbf{Thesis}: Investigation on Optimal Mixing with Linkage Sets and Its Application \\
+% \textbf{LTGA Improvement}: Analyzed on a theoretical basis how the linkage-tee genetic algorithm (LTGA) utilizes its linkage model and improved LTGA by applying a dynamic model throughout the optimizing process. \\
+% \textbf{GA Benchmark Design}: Analyzed on a theoretical basis what problems are difficult for genetic algorithms (GA-hard) and designed a benchmark with controllable problem complexity for testing modern GAs.
 
-\section{ACHIEVEMENT \& AWARDS}
 
-\textbf{Fellowship}, University of California, Santa Cruz \hfill Jan. 2017 - Mar. 2017
+% \section{ACHIEVEMENT \& AWARDS}
+%
+% \textbf{Fellowship}, University of California, Santa Cruz \hfill Jan. 2017 - Mar. 2017
+%
+% \textbf{Teaching Assistantship}, University of California, Santa Cruz \hfill Sep. 2016 - present
+%
+% \textbf{Travel Grant of Domestic Graduate Attending International Symposiums}, Ministry of Science and Technology, Taiwan \hfill Sep. 2014
 
-\textbf{Teaching Assistantship}, University of California, Santa Cruz \hfill Sep. 2016 - present
-
-\textbf{Travel Grant of Domestic Graduate Attending International Symposiums}, Ministry of Science and Technology, Taiwan \hfill Sep. 2014
-
-\textbf{Teaching Assistantship}, National Taiwan University \hfill Sep. 2013 - June 2014
-\begin{itemize}
-    \item Available to top 10\% of graduate students.
-\end{itemize}
+% \textbf{Teaching Assistantship}, National Taiwan University \hfill Sep. 2013 - June 2014
+% \begin{itemize}
+%     \item Available to top 10\% of graduate students.
+% \end{itemize}
 
 
 \section{Projects}
 \href{https://github.com/ipod825/keraflow}{\textbf{Keraflow}}: Personal open source project implementing a deep learning library on top of \textbf{Theano} and \textbf{Tensorflow}. Redesigned the popular deep learning library Keras with the same utility but a simpler architecture aiming for easier development for package developers and clearer core dump for package users. \\
 \href{https://github.com/ipod825/vim-netranger}{\textbf{vim-netranger}}: Personal open source project. A ranger-like system/cloud storage explorer plugin for Vim, bringing together the best of Vim, ranger, and rclone.  \\
-\textbf{Recommendation System on Yelp Data} Course project for Machine Learning class (UCSC). Implemented (using only scipy \& numpy) a hybrid collaborative filtering model combining neighborhood model and factorization model, trained by batch gradient descent. \\
-\textbf{Chinese OCR}: Course project for the OCR contest in Machine Learning class (NTU). Implemented algorithms including naieve Bayes, support vector machine, neural network.
-\textbf{ChenLianYen}(Javascript): Course project implementing a web-based RPG game, where the user can control the role to explore the map and attack monsters on the map.
+% \textbf{Recommendation System on Yelp Data} Course project for the Machine Learning class (UCSC). Implemented using only \textbf{scipy} \& \textbf{numpy} a hybrid collaborative filtering model combining neighborhood model and factorization model, trained by batch gradient descent. \\
+% \textbf{Chinese OCR}: Course project for the OCR contest in the Machine Learning class (NTU). Implemented algorithms including naieve Bayes, support vector machine, neural network. \\
+% \textbf{ChenLianYen}(Javascript): Course project implementing a web-based RPG game, where the user can control the role to explore the map and attack monsters on the map. \\
+% \textbf{Racing Beer}: Course project for Multimedia Lab (NTU). Implemented a 3D model \textbf{android} racing game. Multiple players can contest with each other through blue-tooth. Demo available on my personal web page. \\
+% \textbf{Crazy Ants}: Course project for Multimedia Lab (NTU). Implemented an \textbf{ios} app game. Players use different weapons to destroy ant army. Demo available on my personal web page.
 
 
-\section{Extracurricular}
-Swimming Team of Medicine School, National Taiwan University \hfill 2012-2014
-\begin{itemize}
-    \item Finisher, 1.25 miles open water swimming
-\end{itemize}
+\section{Publication}
+\textbf{Wang, S. M.}, \& Ku, L. W. (2016). ANTUSD: A Large Chinese Sentiment Dictionary.
 
-Taichung City Alumni Club, National Taiwan University \hfill 2008-2011
-\begin{itemize}
-    \item Deputy Director of Activity Group
-    \item Convener of summer camp for freshman
-\end{itemize}
+\textbf{Wang, S. M.}, Tung, Y. F., \& Yu, T. L. (2014, July). Investigation on efficiency of optimal mixing on various linkage sets. In 2014 IEEE Congress on Evolutionary Computation (CEC) (pp. 2475-2482). IEEE.
+
+\textbf{Wang, S. M.}, Wu, J. W., Chen, W. M., \& Yu, T. L. (2013, July). Design of test problems for discrete estimation of distribution algorithms. In Proceedings of the 15th annual conference on Genetic and evolutionary computation (pp. 407-414). ACM.
 
 \section{Skills}
-\textbf{Programming Language}: C/C++, Java, Python, R, MATLAB, Javascript \\
-\textbf{Machine Learning Libraries}: scipy, scikit-learn, Stanford CoreNLP, Keras, Theano, tensorflow \\
-\textbf{General}: Git, neovim, pandas, matplotlib 
-\textbf{Foreign Languages}: Chinese (native), Taiwanese (intermediate)
+\textbf{Programming Language}: C/C++, Java, Python, R, Scala, Julia, MATLAB, Javascript \\
+\textbf{Machine Learning Libraries}: scipy, scikit-learn, Stanford CoreNLP, tensorflow, pytorch, Keras \\
+% \textbf{General}: zsh, git, neovim, gdb, pudb, pyenv \\
+% \textbf{Foreign Languages}: Mandarin (native), Taiwanese (intermediate) \\
 
 \end{document}
